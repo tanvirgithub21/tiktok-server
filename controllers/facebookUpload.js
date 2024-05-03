@@ -21,7 +21,6 @@ export const facebookUploadAndDatabaseUpdated = async (req, res, next) => {
 
     }
 
-    console.log("find video url", getUplodedVideoLink);
 
     const reelsUplodeUrl1 = `https://graph.facebook.com/v19.0/${process.env.page_id}/video_reels`;
     const postDataStep1 = {

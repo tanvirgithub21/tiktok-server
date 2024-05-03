@@ -25,7 +25,6 @@ app.use(express.json());
 app.use("/api/videos", videoRoutes);
 app.use("/api/facebook-upload", vacebookUploadRoute);
 
-console.log("Every 5 secondes");
 // Function to check if it's 7:00 PM local time
 const is7PM = () => moment().format("HH:mm:ss") === "19:00:01";
 const is7_10PM = () => moment().format("HH:mm:ss") === "19:10:01";
@@ -53,7 +52,6 @@ setInterval(async () => {
     });
     const result = await req.json();
 
-    console.log({ result, utcTime });
     // Perform your action here when it's 7:00 PM
   }
 }, 1000); // Check every second

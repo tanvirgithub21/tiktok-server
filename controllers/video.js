@@ -18,7 +18,6 @@ export const createVideo = async (req, res, next) => {
       description
     });
 
-    console.log(video);
 
     res.status(201).json({
       success: true,
@@ -34,7 +33,6 @@ export const createVideo = async (req, res, next) => {
 export const findAllVideo = async (req, res, next) => {
   try {
     const data = await Video.find();
-    console.log({ data });
     res.status(201).json({
       success: true,
       data,
