@@ -10,6 +10,7 @@ import moment from "moment-timezone";
 import axios from "axios";
 import fetch from "node-fetch";
 import { tiktokVideoDownlode } from "./lib/tiktokVideoDownlode.js";
+import bodyParser from "body-parser";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ const port = process.env.PORT || 5000;
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json())
 
 // Routes
 app.use("/api/videos", videoRoutes);
